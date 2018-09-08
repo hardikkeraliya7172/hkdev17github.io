@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="custom.css" type="text/css">
+<head>
+<title>Welcome</title>
+</head>
+
+<body>
+<div class="loading" id="load"><div id="loader"></div></div>
+<div id="main" class="content-wapper">
+	<div class="top-nav-bar" id="nav-bar">
+		<div class="site-logo">
+		<a class="logo" href="default.asp">
+			<img src="C:\Users\hkera\Downloads\Hardik_logo_site.jpg" alt="HTML tutorial" style="width:115px;height:50px;border:0;" />
+		</a>
+		</div>
+		<div class="nav-link">
+		<ul>
+			<li><a href="#home" class="active">Home</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#contact">Contact Us</a></li>
+			<li><a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></li>
+		</ul>
+		</div>
+	</div>
+	<div id="body-header">
+	<div id="home-header1">
+	<h3>Hello, I am Hardik Keraliya</h3>
+	</div>
+	<div id="home-header2">
+		<h5>Academic</h5>
+		<h6>Course:B.E. in Computer Science</h6>
+		<h6>College:parul institute of engineering and technology</h6> 
+	</div>
+	<div id="home-header3">
+		<h5>Career</h5>
+		<h6>internship: Knowarth Technologies</h6>
+		<h6>Training: Linde Engineering India Pvt.Ltd.</h6>
+	</div>
+	</div>
+	<div id="contact">
+		<h2>Contact me</h2>
+			<div class="container">
+				<form action="/action_page.php">
+					<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+					<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+					
+					<input type="text" id="email" name="emailaddress" placeholder="Your Email Address..">
+					
+					<textarea id="Message" name="Message" placeholder="Write something.." style="height:100px"></textarea>
+					
+					<button class="btn btn-primary btn-block">Send</button>				
+				</form>
+			</div>
+
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-google"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+	</div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+	function myFunction() {
+    var x = document.getElementById("nav-bar");
+		if (x.className === "top-nav-bar") {
+        x.className += " responsive";
+		} else {
+        x.className = "top-nav-bar";
+		}
+	}
+	
+	document.onreadystatechange = function () {
+	  var state = document.readyState
+	  if (state == 'interactive') {
+	       document.getElementById('main').style.visibility="hidden";
+	  } else if (state == 'complete') {
+	      setTimeout(function(){
+	         document.getElementById('interactive');
+	         document.getElementById('load').style.visibility="hidden";
+	         document.getElementById('main').style.visibility="visible";
+	      },1000);
+	  }
+	}
+	
+</script>	
+</body>
+</html>
